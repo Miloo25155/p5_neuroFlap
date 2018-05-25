@@ -8,7 +8,7 @@ function Bird()
 	this.jumpForce = createVector(0, -11);
 	this.maxYVelocity = 8;
 
-	this.siz = 20;
+	this.siz = 30;
 
 	this.score = 0;
 	this.isDead = false;
@@ -51,8 +51,8 @@ function Bird()
 	}
 
 	this.hasTouched = function(wall){
-		if(this.pos.x > wall.x && this.pos.x < wall.x + wall.w){
-			if((this.pos.y > 0 && this.pos.y < wall.gapY - wall.gap/2) || (this.pos.y > wall.gapY + wall.gap/2 && this.pos.y < height)){
+		if(this.pos.x + this.siz/2 > wall.x && this.pos.x + this.siz/2 < wall.x + wall.w){
+			if((this.pos.y + this.siz/2 > 0 && this.pos.y + this.siz/2 < wall.gapY - wall.gap/2) || (this.pos.y + this.siz/2 > wall.gapY + wall.gap/2 && this.pos.y + this.siz/2  < height)){
 				return true;
 			}
 		}
