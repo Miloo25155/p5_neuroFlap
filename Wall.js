@@ -1,10 +1,12 @@
-function Wall(_speed)
+function Wall(_speed, _index)
 {
 	this.x = width;
 	this.moveSpeed = _speed;
 	this.w = 20;
-	this.gap = random(80, 200);
+	this.gap = random(70, 200);
 	this.gapY = random(this.gap + 10, height - this.gap -10 );
+	
+	this.ind = _index;
 
 	this.col = color(255,255,255);
 

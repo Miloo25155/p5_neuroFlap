@@ -8,6 +8,9 @@ function Bird()
 	this.jumpForce = createVector(0, -11);
 	this.maxYVelocity = 8;
 
+	this.siz = 20;
+
+	this.score = 0;
 	this.isDead = false;
 
 	this.update = function(){
@@ -39,7 +42,7 @@ function Bird()
 		push();
 		fill(255);
 		translate(this.pos.x, this.pos.y);
-		ellipse(0, 0, 20);
+		ellipse(0, 0, this.siz);
 		pop();
 	}
 
